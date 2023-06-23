@@ -6,18 +6,19 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.HomePage;
+import pages.PokemonHomePage;
 
 public class BaseTest {
     private WebDriver driver;
-    protected HomePage homePage;
+    protected PokemonHomePage pokemonHomePage;
 
     @BeforeClass
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://www.google.com/");
+        driver.get("https://www.pokemon.com/us/");
 
-        homePage = new HomePage(driver);
+        pokemonHomePage = new PokemonHomePage(driver);
         driver.manage().window().maximize();
     }
 
