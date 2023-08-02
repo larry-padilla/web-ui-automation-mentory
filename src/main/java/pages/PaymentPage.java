@@ -12,10 +12,12 @@ public PaymentPage (WebDriver driver){
     this.driver=driver;
 }
 
-public void verifyCheckBox(){
-    driver.findElement(checkbox).getAttribute("checked").equals("true");
+public boolean isShippingAddressActive(){
+   return driver.findElement(checkbox).isSelected();
+
 }
-public String  verifyTotalAmount(){
+
+public String  getTotalAmount(){
     return driver.findElement(totalAmount).getText();
 }
 }
