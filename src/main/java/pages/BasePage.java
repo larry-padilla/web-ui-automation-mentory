@@ -13,6 +13,8 @@ public class BasePage {
     private By menOption = By.className("level0 nav-3 category-item level-top parent ui-menu-item");
     private By topsOption = By.id("ui-id-17");
     private By jacketOption = By.className("level0 nav-3 category-item level-top parent ui-menu-item");
+    private By navButton = By.className("action switch");
+    private By accountLink= By.tagName("li");
 
     public BasePage (WebDriver driver,Actions action) {
         this.driver = driver;
@@ -40,4 +42,9 @@ public class BasePage {
     public void clickJacketsOption(){
         driver.findElement(jacketOption).click();
     }
+
+    public void clickNavButton(){
+        driver.findElement(navButton).click();
+    }
 }
+

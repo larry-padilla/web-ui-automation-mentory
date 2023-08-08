@@ -12,14 +12,14 @@ public class OrderPurchasePage {
     public OrderPurchasePage(WebDriver driver){
         this.driver=driver;
     }
-    public String verifyThanksMessage(){
+    public String getThanksMessage(){
         return driver.findElement(thankYouMessage).getText();
     }
-    public String verifyOrderNumber(){
+    public String getOrderNumber(){
         return  driver.findElement(orderNumber).getText();
     }
 
-    public  String verifyLabelEmailMessage(){
+    public  String getLabelEmailMessage(){
         return driver.findElement(labelEmailMessage).getText();
     }
 }
