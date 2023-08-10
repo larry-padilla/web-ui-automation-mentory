@@ -22,7 +22,7 @@ public class MyAccountPage {
         driver.findElement(navItemOrders).click();
     }
 
-    public String getOrderID(){
+    public String getOrderId(){
         return driver.findElement(orderId).getText();
     }
 
